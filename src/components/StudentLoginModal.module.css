@@ -1,0 +1,349 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-out;
+  backdrop-filter: blur(2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: white;
+  border-radius: 4px;
+  width: 90%;
+  max-width: 440px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease-out;
+  position: relative;
+  border: 1px solid #e5e7eb;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.modalHeader {
+  text-align: center;
+  padding: 40px 30px 20px;
+  background: #0132b2;
+  border-bottom: none;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.tabContainer {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.tab {
+  flex: 1;
+  padding: 14px 20px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.tab:hover {
+  color: #0132b2;
+  background: rgba(1, 50, 178, 0.02);
+}
+
+.activeTab {
+  color: #0132b2;
+  font-weight: 600;
+  background: white;
+  border-bottom: 2px solid #0132b2;
+  margin-bottom: -1px;
+}
+
+.formContainer {
+  padding: 30px;
+  background: white;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 2px;
+  font-size: 14px;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  color: #1f2937;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #0132b2;
+  box-shadow: 0 0 0 2px rgba(1, 50, 178, 0.1);
+}
+
+.passwordInput {
+  position: relative;
+}
+
+.passwordInput .input {
+  padding-right: 40px;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.togglePassword:hover {
+  opacity: 0.8;
+}
+
+.smsBtn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0132b2;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.smsBtn:hover:not(:disabled) {
+  background: #012a96;
+}
+
+.smsBtn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.forgotPassword {
+  text-align: right;
+  margin-bottom: 24px;
+}
+
+.forgotPassword a {
+  color: #0132b2;
+  text-decoration: none;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.forgotPassword a:hover {
+  text-decoration: underline;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 12px 20px;
+  background: #0132b2;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.loginBtn:hover:not(:disabled) {
+  background: #012a96;
+}
+
+.loginBtn:active:not(:disabled) {
+  background: #01227a;
+  transform: translateY(1px);
+}
+
+.loginBtn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.testInfo {
+  margin-top: 25px;
+  padding: 12px 15px;
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 2px;
+}
+
+.testInfo p {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #92400e;
+  line-height: 1.5;
+}
+
+.testInfo strong {
+  color: #78350f;
+  font-weight: 600;
+}
+
+.registerContainer {
+  padding: 40px 30px;
+  text-align: center;
+  background: white;
+}
+
+.registerInfo {
+  margin-bottom: 25px;
+}
+
+.registerInfo p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.registerInfo p:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.registerBtn {
+  width: 100%;
+  padding: 12px 20px;
+  background: white;
+  color: #0132b2;
+  border: 1px solid #0132b2;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.registerBtn:hover {
+  background: #f0f4ff;
+}
+
+.registerBtn:active {
+  background: #e0e7ff;
+  transform: translateY(1px);
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .modalContent {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .modalHeader {
+    padding: 30px 20px 15px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .formContainer,
+  .registerContainer {
+    padding: 25px 20px;
+  }
+
+  .tab {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}

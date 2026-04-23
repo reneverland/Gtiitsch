@@ -1,0 +1,460 @@
+.dashboardContainer {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.header {
+  background: linear-gradient(135deg, #0132b2 0%, #0146d9 100%);
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+}
+
+.logo {
+  height: 64px;
+  width: auto;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.settingsBtn {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.settingsBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.logoutBtn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.schoolStats {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 32px;
+}
+
+.schoolStatsTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #012073;
+  margin: 0 0 16px;
+}
+
+.schoolStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.schoolStatItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 3px solid #0132b2;
+}
+
+.schoolName {
+  font-size: 14px;
+  color: #222;
+  font-weight: 500;
+}
+
+.schoolCount {
+  font-size: 16px;
+  color: #012073;
+  font-weight: 600;
+}
+
+.statCard {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #0132b2;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: #012073;
+  margin: 0;
+}
+
+.tableContainer {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.tableHeader {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tableActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tableTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.searchBox {
+  padding: 8px 16px;
+  border: 1px solid #d0d7e2;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  min-width: 250px;
+}
+
+.searchBox:focus {
+  border-color: #0132b2;
+  box-shadow: 0 0 0 3px rgba(107, 57, 150, 0.1);
+}
+
+.exportBtn {
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.exportBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.deleteBtn {
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.deleteBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.deleteAllBtn {
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.deleteAllBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #f9fafb;
+}
+
+.table th {
+  padding: 16px 12px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table th:first-child {
+  width: 40px;
+  text-align: center;
+}
+
+.table td:first-child {
+  text-align: center;
+}
+
+.table input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.table td {
+  padding: 16px 12px;
+  border-top: 1px solid #f3f4f6;
+  font-size: 14px;
+  color: #222;
+}
+
+.table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusPending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.statusApproved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.statusRejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.actionBtn {
+  background: none;
+  border: 1px solid #d0d7e2;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #0132b2;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.actionBtn:hover {
+  background: #0132b2;
+  color: white;
+  border-color: #0132b2;
+}
+
+.deleteActionBtn {
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.deleteActionBtn:hover {
+  background: #dc2626;
+  color: white;
+  border-color: #dc2626;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 64px 24px;
+  color: #666;
+}
+
+.emptyState p {
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .tableHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .tableActions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .searchBox {
+    width: 100%;
+  }
+  
+  .exportBtn {
+    width: 100%;
+  }
+  
+  .table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px 8px;
+  }
+  
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .schoolStatsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filterGroup {
+  display: flex;
+  gap: 8px;
+  background: white;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.filterBtn {
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.filterBtn:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.filterBtnActive {
+  background: #0132b2;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(1, 50, 178, 0.2);
+}
+
+.scholarshipSubject {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #fef3c7;
+  color: #92400e;
+  white-space: nowrap;
+}
+
+.scholarshipInnovation {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #dbeafe;
+  color: #1e40af;
+  white-space: nowrap;
+}
+

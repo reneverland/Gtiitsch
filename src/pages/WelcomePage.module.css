@@ -1,0 +1,468 @@
+.welcomeContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundOverlay {
+  display: none;
+}
+
+.header {
+  background: #0132b2;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.myDashboardLink {
+  color: #0132b2;
+  background: white;
+  border: 1px solid white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.myDashboardLink:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #0132b2;
+}
+
+.officialLink {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.officialLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0;
+  text-shadow: none;
+  letter-spacing: 3px;
+}
+
+.englishTitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.scholarshipCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.scholarshipCard {
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.scholarshipCard:hover {
+  transform: translateY(-2px);
+  border-color: #0132b2;
+  box-shadow: 0 4px 6px rgba(1, 50, 178, 0.1);
+}
+
+.cardHeader {
+  padding: 30px 20px;
+  color: white;
+  text-align: center;
+}
+
+.cardHeader h3 {
+  margin: 0 0 10px 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cardSubtitle {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.cardContent {
+  background: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.conditionBox {
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 2px;
+  border-left: 4px solid #0132b2;
+}
+
+.conditionBox strong {
+  display: block;
+  color: #0132b2;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.conditionBox p {
+  margin: 0;
+  color: #374151;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.deadlineBox {
+  background: #fffbeb;
+  padding: 15px 20px;
+  border-radius: 2px;
+  border-left: 4px solid #f59e0b;
+}
+
+.deadlineBox p {
+  margin: 5px 0;
+  color: #92400e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.deadlineBox strong {
+  color: #78350f;
+}
+
+.applyCardButton {
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+  margin-top: auto;
+  text-transform: uppercase;
+}
+
+.applyCardButton:hover {
+  filter: brightness(1.1);
+}
+
+.applyCardButton:active {
+  filter: brightness(0.9);
+}
+
+.studentLoginSection {
+  margin-top: 32px;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.studentLoginBtn {
+  padding: 14px 48px;
+  background: #0132b2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+}
+
+.studentLoginBtn:hover {
+  background: #012491;
+  box-shadow: 0 4px 12px rgba(1, 50, 178, 0.3);
+  transform: translateY(-1px);
+}
+
+.studentLogoutBtn {
+  padding: 10px 32px;
+  background: transparent;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.studentLogoutBtn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+
+.dialogBox {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 50px 60px;
+  max-width: 600px;
+  width: 100%;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.applyButton {
+  background: #0132b2;
+  color: white;
+  border: none;
+  padding: 18px 80px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 2px;
+}
+
+.applyButton:hover {
+  filter: brightness(1.1);
+}
+
+.applyButton:active {
+  filter: brightness(0.9);
+}
+
+.contactInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer {
+  background: #1a1a2e;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 28px 20px 20px;
+  font-size: 13px;
+  position: relative;
+  z-index: 10;
+}
+
+.footerContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+
+.footerContact span {
+  padding: 0 16px;
+}
+
+.footerContact strong {
+  color: white;
+  font-weight: 600;
+}
+
+.footerDivider {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: 0 !important;
+}
+
+.footerCopy {
+  margin: 0 0 12px;
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.developer {
+  opacity: 0.35;
+  font-size: 11px;
+}
+
+.developer a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.developer a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.adminEntry {
+  opacity: 0.3;
+  font-size: 11px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.adminEntry:hover {
+  opacity: 0.7;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .headerTitle h1 {
+    font-size: 16px;
+  }
+
+  .headerTitle p {
+    font-size: 11px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .mainTitle {
+    font-size: 32px;
+  }
+
+  .englishTitle {
+    font-size: 14px;
+  }
+
+  .scholarshipCards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cardHeader h3 {
+    font-size: 24px;
+  }
+
+  .cardContent {
+    padding: 20px;
+  }
+
+  .dialogBox {
+    padding: 30px 25px;
+  }
+
+  .applyButton {
+    padding: 15px 50px;
+    font-size: 18px;
+  }
+
+  .footerContact {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footerDivider {
+    display: none;
+  }
+
+  .footerContact span {
+    padding: 0;
+  }
+}
+

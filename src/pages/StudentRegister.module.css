@@ -1,0 +1,351 @@
+.registerContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, #0146d9 0%, #0132b2 45%, #012073 100%);
+  padding: 40px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 0 0 12px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-weight: 300;
+}
+
+.registerCard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.formTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.formRow {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.formRow:last-child {
+  border-bottom: none;
+}
+
+.labelCell {
+  min-width: 200px;
+  width: 200px;
+  background: linear-gradient(135deg, #0132b2 0%, #0146d9 100%);
+  color: white;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.labelCell small {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+.inputCell {
+  flex: 1;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.input:focus {
+  border-color: #0132b2;
+  box-shadow: 0 0 0 4px rgba(107, 57, 150, 0.08);
+  background-color: #fefeff;
+}
+
+.validation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+.validation.success {
+  color: #10b981;
+}
+
+.validation.error {
+  color: #ef4444;
+}
+
+.validation.warning {
+  color: #f59e0b;
+}
+
+.verifyButton {
+  padding: 11px 22px;
+  background: linear-gradient(135deg, #0132b2 0%, #0146d9 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(1, 50, 178, 0.25);
+  flex-shrink: 0;
+}
+
+.verifyButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(1, 50, 178, 0.4);
+  background: linear-gradient(135deg, #012491 0%, #015fd9 100%);
+}
+
+.verifyButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(107, 57, 150, 0.25);
+}
+
+.verifyButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+}
+
+.notice {
+  padding: 28px 32px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 5px solid #f59e0b;
+  border-radius: 0 0 0 0;
+}
+
+.noticeTitle {
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.noticeList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.noticeList li {
+  font-size: 13px;
+  color: #78350f;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.noticeList li::before {
+  content: "●";
+  position: absolute;
+  left: 8px;
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+.actions {
+  padding: 32px 28px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-top: 2px solid #f3f4f6;
+  background: #fafbfc;
+}
+
+.btn {
+  padding: 14px 56px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.3px;
+}
+
+.btnPrimary {
+  padding: 14px 56px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #0132b2 0%, #0146d9 100%);
+  color: white;
+  box-shadow: 0 4px 16px rgba(1, 50, 178, 0.35);
+}
+
+.btnPrimary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(1, 50, 178, 0.45);
+  background: linear-gradient(135deg, #012491 0%, #015fd9 100%);
+}
+
+.btnPrimary:active:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(1, 50, 178, 0.35);
+}
+
+.btnPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btnSecondary {
+  padding: 14px 56px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.3px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #0132b2;
+  border: 2px solid #0132b2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btnSecondary:hover {
+  background: rgba(1, 50, 178, 0.08);
+  border-color: #012491;
+  box-shadow: 0 4px 12px rgba(1, 50, 178, 0.15);
+  transform: translateY(-2px);
+}
+
+.btnSecondary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.loginLink {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 300;
+}
+
+.loginLink a {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #fbbf24;
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.loginLink a:hover {
+  color: #fcd34d;
+  border-bottom-color: #fcd34d;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 900px) {
+  .registerCard {
+    max-width: 95%;
+    border-radius: 16px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+  }
+  
+  .labelCell {
+    width: 100%;
+    min-width: auto;
+    padding: 16px 20px;
+  }
+  
+  .inputCell {
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .validation {
+    order: 2;
+    margin-top: 8px;
+  }
+  
+  .verifyButton {
+    order: 1;
+    width: 100%;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 14px 32px;
+  }
+  
+  .registerContainer {
+    padding: 24px 12px;
+  }
+}
+

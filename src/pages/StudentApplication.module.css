@@ -1,0 +1,755 @@
+.contentInner {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 12px;
+  padding: 32px;
+  min-height: 500px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.contentTitle {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #0132b2;
+  letter-spacing: 0.5px;
+}
+
+.contentSubtitle {
+  margin: 0 0 24px;
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px 24px;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 8px;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.input,
+.select,
+.textarea {
+  padding: 11px 14px;
+  border-radius: 6px;
+  border: 1px solid #d0d7e2;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2937;
+  outline: none;
+  transition: all 0.15s;
+  background-color: #fff;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #0132b2;
+  box-shadow: 0 0 0 3px rgba(1, 50, 178, 0.1);
+}
+
+.note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 0 48px;
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.5px;
+  height: 64px;
+  min-width: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnPrimary {
+  /* 继承所有基础样式 */
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 0 48px;
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.5px;
+  height: 64px;
+  min-width: 180px;
+  position: relative;
+  overflow: hidden;
+  /* 主按钮特有样式 */
+  background: linear-gradient(135deg, #0f3bd8 0%, #0b63f3 100%);
+  color: #fff;
+  box-shadow: 0 10px 25px -5px rgba(11, 99, 243, 0.4), 0 8px 10px -6px rgba(11, 99, 243, 0.1);
+}
+
+.btnPrimary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(11, 99, 243, 0.5), 0 8px 10px -6px rgba(11, 99, 243, 0.1);
+  background: linear-gradient(135deg, #0c2fbe 0%, #0a5be0 100%);
+}
+
+.btnPrimary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 10px 15px -3px rgba(11, 99, 243, 0.3);
+}
+
+.btnPrimary:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btnSecondary {
+  /* 继承所有基础样式 */
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 0 48px;
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.5px;
+  height: 64px;
+  min-width: 180px;
+  position: relative;
+  overflow: hidden;
+  /* 次按钮特有样式 */
+  background: #ffffff;
+  color: #4b5563;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.btnSecondary:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  color: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.btnSecondary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(11, 99, 243, 0.35);
+  outline-offset: 3px;
+}
+
+.highlightBar {
+  background: linear-gradient(135deg, #f0ebf8 0%, #e8dff5 100%);
+  border-left: 4px solid #0132b2;
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 15px;
+  margin-bottom: 24px;
+  color: #1f2937;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.welcomeSection {
+  background: linear-gradient(135deg, #f8f4fc 0%, #f0ebf8 100%);
+  padding: 24px 28px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  border-left: 4px solid #0132b2;
+  box-shadow: 0 2px 8px rgba(107, 57, 150, 0.08);
+}
+
+.welcomeText {
+  font-size: 16px;
+  color: #1f2937;
+  line-height: 1.9;
+  margin: 0;
+  font-weight: 500;
+}
+
+.guideSection {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.guideSection:last-of-type {
+  border-bottom: none;
+}
+
+.guideSection h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #0132b2;
+  font-weight: 700;
+}
+
+.guideSection p,
+.guideSection li {
+  font-size: 15px;
+  color: #1f2937;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.guideSection ol {
+  padding-left: 24px;
+  margin: 12px 0 16px;
+}
+
+.guideSection ol li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.downloadSection {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.downloadLink {
+  display: inline-block;
+  color: #0132b2;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid #0132b2;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(1, 50, 178, 0.15);
+}
+
+.downloadLink:hover {
+  background: linear-gradient(135deg, #0132b2 0%, #0146d9 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(1, 50, 178, 0.3);
+}
+
+.downloadLink:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(1, 50, 178, 0.15);
+}
+
+.examSection {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #0132b2;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.examTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #012073;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #0132b2;
+}
+
+.competitionSection,
+.activitySection {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.competitionSection:hover,
+.activitySection:hover {
+  box-shadow: 0 4px 12px rgba(1, 50, 178, 0.1);
+  border-color: #0146d9;
+}
+
+.removeButton {
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.removeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+.removeButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.addButton {
+  padding: 12px 24px;
+  background: white;
+  border: 2px dashed #0132b2;
+  border-radius: 10px;
+  color: #0132b2;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(1, 50, 178, 0.1);
+}
+
+.addButton:hover {
+  background: linear-gradient(135deg, #0132b2 0%, #0146d9 100%);
+  color: white;
+  border-style: solid;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(1, 50, 178, 0.3);
+}
+
+.addButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(1, 50, 178, 0.1);
+}
+
+.uploadSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.uploadItem {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f9fafb;
+}
+
+.uploadHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.uploadHeader h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.requiredBadge {
+  background: #ef4444;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.optionalBadge {
+  background: #f59e0b;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.uploadNote {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.uploadBox {
+  background: white;
+  border: 2px dashed #d0d7e2;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.uploadBox:hover {
+  border-color: #0132b2;
+  background: #f9fafb;
+}
+
+.uploadLabel {
+  display: inline-block;
+  padding: 13px 36px;
+  background: linear-gradient(135deg, #0132b2 0%, #0146d9 100%);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 12px rgba(1, 50, 178, 0.3);
+}
+
+.uploadLabel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(1, 50, 178, 0.4);
+  background: linear-gradient(135deg, #012491 0%, #015fd9 100%);
+}
+
+.uploadLabel:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(1, 50, 178, 0.3);
+}
+
+.uploadHint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.statusBar {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.statusAlert {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.adminLink {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.adminLink a {
+  color: #0132b2;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.adminLink a:hover {
+  text-decoration: underline;
+}
+
+.progressBar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 8px;
+}
+
+.progressStep {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.progressStep.active {
+  background: linear-gradient(90deg, #0132b2 0%, #0146d9 100%);
+}
+
+/* 头部用户信息和操作按钮 */
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 14px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+}
+
+.userName {
+  font-weight: 600;
+}
+
+.userIdCard {
+  opacity: 0.9;
+  font-size: 13px;
+}
+
+.headerBtn {
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
+}
+
+.headerBtn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.headerBtnSave {
+  background: rgba(16, 185, 129, 0.25);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25);
+}
+
+.headerBtnSave:hover {
+  background: rgba(16, 185, 129, 0.45);
+  transform: translateY(-1px);
+}
+
+.headerBtnLogout {
+  background: rgba(239, 68, 68, 0.25);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.25);
+}
+
+.headerBtnLogout:hover {
+  background: rgba(239, 68, 68, 0.5);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .contentInner {
+    padding: 20px;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .userInfo {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .userName {
+    display: none;
+  }
+  
+  .headerBtn,
+  .headerBtnSave,
+  .headerBtnLogout {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* 协议勾选样式 */
+.agreementBox {
+  margin-bottom: 20px;
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #0132b2;
+}
+
+/* 按钮动态效果 */
+.btnPulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(1, 50, 178, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(1, 50, 178, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(1, 50, 178, 0);
+  }
+}
+
+/* 附件上传相关样式 */
+.uploadedFile {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.fileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.fileName {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.fileSize {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.fileActions {
+  display: flex;
+  gap: 8px;
+}
+
+.btnPreview,
+.btnDelete {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btnPreview {
+  background: #3b82f6;
+  color: white;
+}
+
+.btnPreview:hover {
+  background: #2563eb;
+}
+
+.btnDelete {
+  background: #ef4444;
+  color: white;
+}
+
+.btnDelete:hover {
+  background: #dc2626;
+}
+
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

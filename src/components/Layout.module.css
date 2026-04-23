@@ -1,0 +1,92 @@
+.topBanner {
+  background: linear-gradient(135deg, #0132b2 0%, #0146d9 100%);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.titleContainer {
+  flex: 1;
+  text-align: center;
+}
+
+.mainTitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.subTitle {
+  margin: 4px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.pageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 16px 32px;
+}
+
+.appCard {
+  width: 100%;
+  max-width: 1200px;
+  background: #ffffff;
+  color: #222;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  min-height: 600px;
+}
+
+.content {
+  flex: 1;
+  padding: 32px;
+  background: #f7f9ff;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .appCard {
+    flex-direction: column;
+  }
+  
+  .mainTitle {
+    font-size: 18px;
+  }
+  
+  .subTitle {
+    font-size: 14px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+}
+
+
