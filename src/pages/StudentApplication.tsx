@@ -289,10 +289,17 @@ const StudentApplication: React.FC = () => {
         case 'competition':
           // 多文件上传
           const competitionFiles: AttachmentFile[] = []
+          const competitionSkipped: string[] = []
           for (let i = 0; i < files.length; i++) {
             const f = files[i]
-            if (f.size > 10 * 1024 * 1024) continue
-            if (!validTypes.includes(f.type)) continue
+            if (f.size > 10 * 1024 * 1024) {
+              competitionSkipped.push(`「${f.name}」超过10MB`)
+              continue
+            }
+            if (!validTypes.includes(f.type)) {
+              competitionSkipped.push(`「${f.name}」格式不支持`)
+              continue
+            }
             const url = await fileToBase64(f)
             competitionFiles.push({
               name: f.name,
@@ -301,15 +308,25 @@ const StudentApplication: React.FC = () => {
               dataUrl: url
             })
           }
+          if (competitionSkipped.length > 0) {
+            alert('以下文件已跳过：\n' + competitionSkipped.join('\n'))
+          }
           setCompetitionAttachments([...competitionAttachments, ...competitionFiles])
           break
         case 'other':
           // 多文件上传
           const otherFiles: AttachmentFile[] = []
+          const otherSkipped: string[] = []
           for (let i = 0; i < files.length; i++) {
             const f = files[i]
-            if (f.size > 10 * 1024 * 1024) continue
-            if (!validTypes.includes(f.type)) continue
+            if (f.size > 10 * 1024 * 1024) {
+              otherSkipped.push(`「${f.name}」超过10MB`)
+              continue
+            }
+            if (!validTypes.includes(f.type)) {
+              otherSkipped.push(`「${f.name}」格式不支持`)
+              continue
+            }
             const url = await fileToBase64(f)
             otherFiles.push({
               name: f.name,
@@ -317,6 +334,9 @@ const StudentApplication: React.FC = () => {
               size: f.size,
               dataUrl: url
             })
+          }
+          if (otherSkipped.length > 0) {
+            alert('以下文件已跳过：\n' + otherSkipped.join('\n'))
           }
           setOtherAttachments([...otherAttachments, ...otherFiles])
           break

@@ -14,8 +14,8 @@ const PORT = process.env.PORT || 8500;
 
 // 中间件
 app.use(cors());
-app.use(bodyParser.json({ limit: '50mb' }));
-app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
+app.use(bodyParser.json({ limit: '200mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '200mb' }));
 
 // API 路由
 app.use('/api/auth', authRoutes);
